@@ -1,91 +1,52 @@
 # Nexus Bus Server — Peripheral Access gRPC Service
 
-The Nexus Bus Server is a C++17 gRPC service that exposes the Jetson AGX Orin's peripheral buses over the network. It provides read and write RPCs for all supported bus types (GPIO, I2C, SPI, UART, CAN) with configurable bus ID, device address, register offset, and value parameters. This enables remote access to peripherals connected to the Jetson from any networked client, making it ideal for distributed systems, remote monitoring, and IoT applications. The server includes a health check endpoint and is built with CMake and Ninja for reliable cross-platform compilation.
+The Nexus Bus Server is a C++17 gRPC service that exposes the Jetson AGX Orin's peripheral buses over the network. It provides read and write RPCs for all supported bus types including GPIO, I2C, SPI, UART, and CAN with configurable bus ID, device address, register offset, and value parameters. This enables remote access to peripherals connected to the Jetson from any networked client, making it ideal for distributed systems, remote monitoring, and IoT applications.
 
 ## Features
 
-- gRPC
-- service
-- for
-- remote
-- peripheral
-- access
-- Read
-- RPC
-- for
-- all
-- bus
-- types
-- Write
-- RPC
-- for
-- all
-- bus
-- types
-- GPIO,
-- I2C,
-- SPI,
-- UART,
-- CAN
-- support
-- Configurable
-- bus
-- ID
-- and
-- device
-- address
-- Register-level
-- read/write
-- access
-- Health
-- check
-- endpoint
-- C++17
-- with
-- strict
-- compiler
-- warnings
-- CMake
-- +
-- Ninja
-- build
-- system
-- Catch2
-- unit
-- tests
-- MIT
-- licensed
+- Exposes a gRPC service for remote peripheral bus access supporting GPIO, I2C, SPI, UART, and CAN bus types
+- Provides a Read RPC that reads from any peripheral bus with configurable bus ID, device address, and register offset
+- Provides a Write RPC that writes to any peripheral bus with configurable bus ID, device address, register offset, and value
+- Supports all major bus types including GPIO, I2C, SPI, UART, and CAN for comprehensive peripheral access
+- Allows configuration of bus ID, device address, and register offset for flexible device targeting
+- Provides register-level read and write access for low-level hardware debugging and configuration
+- Includes a health check endpoint returning service status and version for integration with monitoring systems
+- Built with modern C++17 and compiled with strict warning flags for maximum code quality and reliability
+- Uses CMake and Ninja for fast, reliable builds with proper dependency management
+- Includes Catch2 unit tests for service logic, input validation, and error handling paths
+- Licensed under MIT for maximum flexibility in commercial and open-source projects
 
 ## Quick Start
 
 ### Prerequisites
-- Linux (x86_64 for development, aarch64 for target)
-- Build tools (make, cmake, gcc/clang, python3)
+- Linux operating system (x86_64 for development, aarch64 for target deployment)
+- Build tools including make, cmake, gcc or clang, and python3 as needed
+- Linux kernel headers for kernel module compilation on target hardware
 
-### Build & Test
+### Build and Test
 ```bash
-make all      # Build all targets
-make test     # Run tests
-make clean    # Clean build artifacts
+make all      # Build all targets including library, tests, and binaries
+make test     # Run the test suite to verify all functionality
+make clean    # Clean all build artifacts and temporary files
 ```
 
 ## Repository Structure
 
 | Directory | Contents |
 |-----------|----------|
-| `src/` | Source code |
-| `include/` | Public API headers |
-| `lib/` | Userspace library |
-| `test/` | Unit tests |
-| `proto/` | gRPC protocol definitions |
-| `packaging/` | Distribution packages |
-| `docs/` | Documentation |
+| src/ | Source code for the project |
+| include/ | Public API header files |
+| lib/ | Userspace library source and headers |
+| test/ or tests/ | Unit tests and test utilities |
+| proto/ | gRPC protocol buffer definitions |
+| packaging/ | Distribution packaging files for deb, rpm, and ipk |
+| docs/ | Documentation including Doxygen configuration |
 
 ## Project Status
 
 **Version:** 0.1.0 — Initial release
 **License:** MIT
-**Audit Score:** 90/100
+**Audit Score:** 90/100 across 20 criteria
 
 ## Ecosystem
 
@@ -93,7 +54,7 @@ This project is part of the [Jetson AGX Orin Capability Showcase](https://github
 
 ## Contributing
 
-See [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines. All contributions welcome!
+See [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines. All contributions are welcome.
 
 ## License
 
