@@ -1,0 +1,9 @@
+# ninja log v5
+0	8	1785966696077634687	generated/nexus_bus.pb.cc	803af4798e16c998
+0	8	1785966696077634687	generated/nexus_bus.grpc.pb.cc	803af4798e16c998
+0	8	1785966696077634687	/home/sandesh/jetson/build/nexus-bus-server/build/generated/nexus_bus.pb.cc	803af4798e16c998
+0	8	1785966696077634687	/home/sandesh/jetson/build/nexus-bus-server/build/generated/nexus_bus.grpc.pb.cc	803af4798e16c998
+8	551	1785966696620269982	CMakeFiles/nexus_bus_proto.dir/generated/nexus_bus.pb.cc.o	8a8697f357937262
+8	949	1785966697018289089	CMakeFiles/nexus-bus-server.dir/src/main.cpp.o	b1ade9d34aa443cb
+8	1249	1785966697315767770	CMakeFiles/nexus_bus_proto.dir/generated/nexus_bus.grpc.pb.cc.o	9781bcea39aa2a92
+1249	1339	1785966697404646656	nexus-bus-server	5af16b56723fa9e2
