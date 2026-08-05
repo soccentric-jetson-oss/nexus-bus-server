@@ -4,8 +4,8 @@ service NexusBus {
     rpc Write(WriteRequest) returns (WriteResponse);
     rpc HealthCheck(HealthRequest) returns (HealthResponse);
 }
-message ReadRequest { uint32 bus_type=1; uint32 bus_id=2; uint32 addr=3; uint32 reg=4; }
+message ReadRequest { uint32 bus_type=1; /* 0=GPIO, 1=I2C, 2=SPI, 3=UART, 4=CAN */ uint32 bus_id=2; uint32 addr=3; uint32 reg=4; }
 message ReadResponse { bool success=1; uint32 value=2; string error=3; }
-message WriteRequest { uint32 bus_type=1; uint32 bus_id=2; uint32 addr=3; uint32 reg=4; uint32 value=5; }
+message WriteRequest { uint32 bus_type=1; /* 0=GPIO, 1=I2C, 2=SPI, 3=UART, 4=CAN */ uint32 bus_id=2; uint32 addr=3; uint32 reg=4; uint32 value=5; }
 message WriteResponse { bool success=1; string error=2; }
 message HealthRequest {} message HealthResponse { string status=1; string version=2; }
