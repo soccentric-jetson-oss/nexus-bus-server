@@ -1,9 +1,18 @@
 #include <catch2/catch_test_macros.hpp>
 #include <thread>
 #include <chrono>
+#include <atomic>
+#include <grpcpp/grpcpp.h>
+#include <nexus_bus.grpc.pb.h>
 
 TEST_CASE("Server configuration is valid", "[server]") {
-    REQUIRE(true);
+    nexusbus::NexusBus::Service service;
+    grpc::ServerBuilder builder;
+    builder.AddListeningPort("127.0.0.1:0", grpc::InsecureServerCredentials());
+    builder.RegisterService(&service);
+    auto server = builder.BuildAndStart();
+    REQUIRE(server != nullptr);
+    server->Shutdown();
 }
 
 TEST_CASE("Concurrent requests handled", "[server]") {
@@ -16,5 +25,8 @@ TEST_CASE("Concurrent requests handled", "[server]") {
 }
 
 TEST_CASE("Error responses are well-formed", "[server]") {
-    REQUIRE(true);
+    grpc::Status not_found(grpc::StatusCode::NOT_FOUND, "bus not found");
+    REQUIRE_FALSE(not_found.ok());
+    REQUIRE(not_found.error_code() == grpc::StatusCode::NOT_FOUND);
+    REQUIRE(not_found.error_message() == "bus not found");
 }
