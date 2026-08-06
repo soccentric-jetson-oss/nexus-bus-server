@@ -1,9 +1,20 @@
 # ninja log v5
 0	8	1785966696077634687	generated/nexus_bus.pb.cc	803af4798e16c998
+0	8	1785966696077634687	/home/sandesh/jetson/build/nexus-bus-server/build/generated/nexus_bus.grpc.pb.cc	803af4798e16c998
+8	1249	1785966697315767770	CMakeFiles/nexus_bus_proto.dir/generated/nexus_bus.grpc.pb.cc.o	9781bcea39aa2a92
 0	8	1785966696077634687	generated/nexus_bus.grpc.pb.cc	803af4798e16c998
 0	8	1785966696077634687	/home/sandesh/jetson/build/nexus-bus-server/build/generated/nexus_bus.pb.cc	803af4798e16c998
-0	8	1785966696077634687	/home/sandesh/jetson/build/nexus-bus-server/build/generated/nexus_bus.grpc.pb.cc	803af4798e16c998
 8	551	1785966696620269982	CMakeFiles/nexus_bus_proto.dir/generated/nexus_bus.pb.cc.o	8a8697f357937262
 8	949	1785966697018289089	CMakeFiles/nexus-bus-server.dir/src/main.cpp.o	b1ade9d34aa443cb
-8	1249	1785966697315767770	CMakeFiles/nexus_bus_proto.dir/generated/nexus_bus.grpc.pb.cc.o	9781bcea39aa2a92
 1249	1339	1785966697404646656	nexus-bus-server	5af16b56723fa9e2
+1	9	1785980928705960579	generated/nexus_bus.pb.cc	803af4798e16c998
+1	9	1785980928705960579	generated/nexus_bus.grpc.pb.cc	803af4798e16c998
+1	9	1785980928705960579	/home/sandesh/jetson/build/nexus-bus-server/build/generated/nexus_bus.pb.cc	803af4798e16c998
+1	9	1785980928705960579	/home/sandesh/jetson/build/nexus-bus-server/build/generated/nexus_bus.grpc.pb.cc	803af4798e16c998
+9	576	1785980929272902366	CMakeFiles/nexus_bus_proto.dir/generated/nexus_bus.pb.cc.o	f1fe0f14fe9ca132
+10	1019	1785980929713970394	CMakeFiles/nexus-bus-core.dir/src/service/nexus_bus_service.cpp.o	fa54a930431c2c12
+10	1019	1785980929714970403	CMakeFiles/nexus-bus-core.dir/src/server/server.cpp.o	4e37c8e90f356a47
+576	1175	1785980929871791724	CMakeFiles/nexus-bus-server.dir/src/main.cpp.o	db926925370da8f3
+10	1316	1785980930009149809	CMakeFiles/nexus_bus_proto.dir/generated/nexus_bus.grpc.pb.cc.o	82cdfcf406a38a4b
+1316	1340	1785980930037682666	libnexus-bus-core.a	f14c3a9d46a60ce3
+1340	1443	1785980930136974512	nexus-bus-server	ce9b40935afc3511
